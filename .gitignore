@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 # vs code extensions
 .vscode/
+
+er.email
