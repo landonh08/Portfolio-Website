@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -50,11 +51,7 @@ const textCase = "capitalize";
 
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
-        <footer>
-            <a href="/">Home</a>
-            <a href="/about/">About</a>
-            <a href="/blog/">Blog</a>
-        </footer>
+        <Navigation/>
 
 	</body>
     <style define:vars={{skillColor, fontWeight, textCase}}>
