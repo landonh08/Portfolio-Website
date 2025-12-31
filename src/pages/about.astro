@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -32,6 +33,7 @@ const textCase = "capitalize";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
+        <Header/>
 		<h1>{pageTitle}</h1>
         <p>Here are a few facts about me:</p>
         <ul>
@@ -51,8 +53,6 @@ const textCase = "capitalize";
 
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
-        <Navigation/>
-
 	</body>
     <style define:vars={{skillColor, fontWeight, textCase}}>
         h1 {
@@ -66,4 +66,7 @@ const textCase = "capitalize";
             text-transform: var(--textCase);
         }
     </style>
+    <script>
+        import "../scripts/menu.js";
+    </script>
 </html>
