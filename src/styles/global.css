@@ -2,14 +2,15 @@
 @import "tailwindcss";
 
 * {
-  margin: 0px;
-  padding: 0px;
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-accent: hsl(216, 100%, 50%);
+  --color-accent-darkened: hsl(216, 100%, 20%);
+  --color-accent-darkest: hsl(216, 100%, 10%);
 
   --color-text: var(--text);
   --color-text-secondary: var(--text-secondary);
@@ -40,8 +41,25 @@
 
 @layer components {
   .particle {
-    @apply absolute rounded-full w-1 h-1 bg-white/15 blur-[1px];
+    @apply absolute rounded-full w-1 h-1 bg-white/30 blur-[1px];
     will-change: transform;
+  }
+  .glow:hover {
+    box-shadow: 0px 0px 20px .8rem hsl(from var(--color-accent) h s l /.2);
+  }
+  .glow:active {
+    box-shadow: none;
+  }
+  .background-grid {
+    background:
+      radial-gradient(circle farthest-side at 0% 50%,var(--color-primary) 23.5%,#0000 0)33.6px 48px,
+      radial-gradient(circle farthest-side at 0% 50%,var(--color-accent-darkest) 24%,#0000 0)30.4px 48px,
+      linear-gradient(var(--color-primary) 14%,#0000 0, #0000 85%,var(--color-primary) 0)0 0,
+      linear-gradient(150deg,var(--color-primary) 24%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 26%,#0000 0,#0000 74%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 76%,var(--color-primary) 0)0 0,
+      linear-gradient(30deg,var(--color-primary) 24%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 26%,#0000 0,#0000 74%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 76%,var(--color-primary) 0)0 0,
+      linear-gradient(90deg,var(--color-accent-darkest) 2%,var(--color-primary) 0,var(--color-primary) 98%,var(--color-accent-darkest) 0%)0 0 var(--color-primary);
+    background-size: 64px 96px;
+    background-color: var(--color-primary);
   }
 }
 
