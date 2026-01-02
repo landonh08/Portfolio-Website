@@ -18,12 +18,12 @@
   :root {
     --primary: #F8F9FD;
     --secondary: #fff;
-    --text: red; 
+    --text: black; 
   }
    .dark {
     --primary: #121212;
     --secondary: #1A1A1A; 
-    --text: blue;
+    --text: white;
    }
 
 }
