@@ -10,20 +10,46 @@
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-text: var(--text);
 
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-gradient-start: var(--gradient);
+
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay: fade-in 0.7s ease-out .2s forwards;
 }
 
 @layer base {
   :root {
     --primary: #F8F9FD;
     --secondary: #fff;
-    --text: black; 
+    --text: #121212; 
+    --text-secondary: #1A1A1A;
+    --gradient: blue;
   }
    .dark {
     --primary: #121212;
     --secondary: #1A1A1A; 
     --text: white;
+    --text-secondary: #888888;
+    --gradient: #1b1a2e;
    }
 
+}
+
+@layer components {
+  .particle {
+    @apply absolute rounded-full w-1 h-1 bg-white/15 blur-[1px];
+    will-change: transform;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  } 
 }
