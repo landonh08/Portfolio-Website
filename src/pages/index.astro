@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from '../components/Greeting.jsx';
 
 const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
-  <p>Welcome :)<br> <s>There's something nice about plain html webites idk what it is</s> Nah TNR looks really bad Roboto is so much better</p>
+  <Greeting client:load messages={["Hej", "Hello", "Hola", "Habari"]} />
 </BaseLayout>
