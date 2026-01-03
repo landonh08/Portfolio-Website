@@ -5,6 +5,10 @@
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html body {
+  overflow-x: hidden;
+}
+
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
@@ -22,8 +26,10 @@
 
   --color-gradient-start: var(--gradient);
 
-  --animate-fade-in: fade-in 0.7s ease-out forwards;
-  --animate-fade-in-delay: fade-in 0.7s ease-out .2s forwards;
+  --animate-fade-in: fade-in 0.7s ease-in forwards;
+  --animate-fade-in-delay: fade-in 0.7s ease-in .2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-in .4s forwards;
+
 }
 
 @layer base {
@@ -73,7 +79,40 @@
       linear-gradient(90deg,var(--color-tertiary) 2%,var(--color-secondary) 0,var(--color-secondary) 98%,var(--color-tertiary) 0%)0 0 var(--color-secondary);
     background-size: 64px 96px;
     background-color: var(--color-secondary);
-    z-index: -10;
+  }
+
+  .scale-up:hover {
+    transform: scale(150%);
+  }
+
+  .scroll-fade {
+    opacity: 0;
+    transition: opactiy 600ms ease;
+  }
+  .scroll-fade.show {
+    opacity: 1;
+  }
+
+  .border-hover {
+    border: 1px solid transparent;
+  }
+
+  .border-hover:hover {
+    border: 1px solid var(--color-accent);
+  }
+
+  .scroll-left {
+    transform: translateX(-100%);
+    transition: transform 800ms ease;
+  }
+
+  .scroll-right {
+    transform: translateX(100%);
+    transition: transform 800ms ease;
+  }
+
+  .scroll-left.show, .scroll-right.show {
+    transform: translate(0);
   }
 
   .glass {
@@ -93,10 +132,14 @@
     mask: 
       linear-gradient(black) border-box,
       linear-gradient(black) padding-box;
-    mask-composite: subtract;
-
+    mask-composite: subtract
     
   }
+
+  .glass::before,
+  .background-grid {
+    pointer-events: none;
+}
 }
 
 @keyframes fade-in {

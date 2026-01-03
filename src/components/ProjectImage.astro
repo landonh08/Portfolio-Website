@@ -1,0 +1,14 @@
+---
+const {link, alt} = Astro.props
+---
+
+<div class="overflow-hidden min-w-fit min-h-fit rounded-2xl">
+    <img src={link} alt={alt}>
+</div>
+<style>
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>

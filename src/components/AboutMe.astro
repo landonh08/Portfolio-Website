@@ -3,20 +3,20 @@ import Icon from "./Icon.astro"
 ---
 
 
-<section class="flex justify-center items-center h-52 min-h-fit background-grid">
+<section class="flex justify-center items-center h-52 min-h-fit">
     <div class="glass text-text w-2/3 min-h-fit m-6">
         <h1 class="text-2xl md:text-4xl text-center m-10 font-bold tracking-wide">About Me</h1>
-        <div class="grid sm:grid-cols-2">
+        <div class="grid md:grid-cols-2 pointer-events-auto box-border">
             <div>
-                <h1 class="subtitle bg-accent-darker max-w-fit px-6 py-3 rounded-2xl mx-auto sm:mx-6 mt-8">Details</h1>
-                <p class="tracking-wide p-6 text-lg bg-tertiary m-6 rounded-2xl">
-                    I'm a senior in high school looking to persue a degree in computer science at Georgia Tech, UGA, or KSU.
-                     I enjoy messing around with pygame and front-end web development. see some of favorite projects below.
+                <h1 class="subtitle bg-accent-darker max-w-fit px-6 py-3 rounded-2xl mx-auto md:mx-6 mt-8 scroll-fade border-hover">Details</h1>
+                <p class="tracking-wide p-6 text-xl bg-tertiary m-6 rounded-2xl scroll-left border-hover">
+                    I’m a senior in high school planning to pursue a degree in computer science at Georgia Tech, UGA, or KSU.
+                     I enjoy building projects with Python and Pygame, as well as designing interactive front-end websites.
                 </p>
             </div>
             <div>
-                <h1 class="subtitle bg-accent-darker max-w-fit px-6 py-3 rounded-2xl mx-auto sm:mx-6 mt-8">Skills</h1>
-                <div class="m-6 flex flex-wrap justify-center items-center">
+                <h1 class="subtitle bg-accent-darker max-w-fit px-6 py-3 rounded-2xl mx-auto md:mx-6 mt-8 scroll-fade border-hover">Skills</h1>
+                <div class="m-6 flex flex-wrap justify-center items-center scroll-right pointer-events-auto">
                     <Icon name="python" link="../../public/logos/python.svg"/>
                     <Icon name="javascript" link="../../public/logos/javascript.svg"/>
                     <Icon name="html" link="../../public/logos/html.svg"/>
