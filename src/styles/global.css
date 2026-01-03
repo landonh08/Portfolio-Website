@@ -8,9 +8,14 @@
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary); 
   --color-accent: hsl(216, 100%, 50%);
-  --color-accent-darkened: hsl(216, 100%, 20%);
+  --color-accent-darker: hsl(216, 100%, 20%);
   --color-accent-darkest: hsl(216, 100%, 10%);
+  --color-surface: var(hsl(243, 26%, 15%));
+
+  --border-1: var(hsl(259, 13%, 28%));
+  --border-2: var(hsl(252, 9%, 22%));
 
   --color-text: var(--text);
   --color-text-secondary: var(--text-secondary);
@@ -25,13 +30,15 @@
   :root {
     --primary: #F8F9FD;
     --secondary: #fff;
+    --tertiary: hsl(0, 0%, 20%); 
     --text: #121212; 
     --text-secondary: #1A1A1A;
     --gradient: blue;
   }
    .dark {
     --primary: #121212;
-    --secondary: #1A1A1A; 
+    --secondary: #1A1A1A;
+    --tertiary: hsl(0, 0%, 20%); 
     --text: white;
     --text-secondary: #888888;
     --gradient: #1b1a2e;
@@ -44,6 +51,11 @@
     @apply absolute rounded-full w-1 h-1 bg-white/30 blur-[1px];
     will-change: transform;
   }
+
+  .subtitle {
+    @apply text-text text-2xl md:text-3xl font-bold tracking-wide text-center;
+  }
+
   .glow:hover {
     box-shadow: 0px 0px 20px .8rem hsl(from var(--color-accent) h s l /.2);
   }
@@ -51,15 +63,39 @@
     box-shadow: none;
   }
   .background-grid {
+    position: relative;
     background:
-      radial-gradient(circle farthest-side at 0% 50%,var(--color-primary) 23.5%,#0000 0)33.6px 48px,
-      radial-gradient(circle farthest-side at 0% 50%,var(--color-accent-darkest) 24%,#0000 0)30.4px 48px,
-      linear-gradient(var(--color-primary) 14%,#0000 0, #0000 85%,var(--color-primary) 0)0 0,
-      linear-gradient(150deg,var(--color-primary) 24%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 26%,#0000 0,#0000 74%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 76%,var(--color-primary) 0)0 0,
-      linear-gradient(30deg,var(--color-primary) 24%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 26%,#0000 0,#0000 74%,var(--color-accent-darkest) 0,var(--color-accent-darkest) 76%,var(--color-primary) 0)0 0,
-      linear-gradient(90deg,var(--color-accent-darkest) 2%,var(--color-primary) 0,var(--color-primary) 98%,var(--color-accent-darkest) 0%)0 0 var(--color-primary);
+      radial-gradient(circle farthest-side at 0% 50%,var(--color-secondary) 23.5%,#0000 0)33.6px 48px,
+      radial-gradient(circle farthest-side at 0% 50%,var(--color-tertiary) 24%,#0000 0)30.4px 48px,
+      linear-gradient(var(--color-secondary) 14%,#0000 0, #0000 85%,var(--color-secondary) 0)0 0,
+      linear-gradient(150deg,var(--color-secondary) 24%,var(--color-tertiary) 0,var(--color-tertiary) 26%,#0000 0,#0000 74%,var(--color-tertiary) 0,var(--color-tertiary) 76%,var(--color-secondary) 0)0 0,
+      linear-gradient(30deg,var(--color-secondary) 24%,var(--color-tertiary) 0,var(--color-tertiary) 26%,#0000 0,#0000 74%,var(--color-tertiary) 0,var(--color-tertiary) 76%,var(--color-secondary) 0)0 0,
+      linear-gradient(90deg,var(--color-tertiary) 2%,var(--color-secondary) 0,var(--color-secondary) 98%,var(--color-tertiary) 0%)0 0 var(--color-secondary);
     background-size: 64px 96px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
+    z-index: -10;
+  }
+
+  .glass {
+    @apply rounded-2xl relative;
+
+    background: hsl(from var(--color-surface) h s l / .3);
+    backdrop-filter: blur(10px);
+  }
+
+  .glass::before {
+    @apply absolute inset-0 z-[-1];
+    content: '';
+    border-radius: inherit;
+
+    border: 1px solid transparent;
+    background: linear-gradient(var(--color-secondary), var(--color-tertiary)) border-box;
+    mask: 
+      linear-gradient(black) border-box,
+      linear-gradient(black) padding-box;
+    mask-composite: subtract;
+
+    
   }
 }
 
