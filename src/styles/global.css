@@ -16,10 +16,10 @@ html body {
   --color-accent: hsl(216, 100%, 50%);
   --color-accent-darker: hsl(216, 100%, 20%);
   --color-accent-darkest: hsl(216, 100%, 10%);
-  --color-surface: var(hsl(243, 26%, 15%));
+  --color-surface: hsl(243, 26%, 15%);
 
-  --border-1: var(hsl(259, 13%, 28%));
-  --border-2: var(hsl(252, 9%, 22%));
+  --border-1: hsl(259, 13%, 28%);
+  --border-2: hsl(252, 9%, 22%);
 
   --color-text: var(--text);
   --color-text-secondary: var(--text-secondary);
