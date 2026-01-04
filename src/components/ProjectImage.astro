@@ -13,10 +13,10 @@ const revealedLink = link.slice(0, -4) + "-revealed.png";
         background-position: top;
         background-repeat: no-repeat;
         background-size: contain;
-        transition: translate .5s ease;
+        transition: translate .3s ease; /* I dont know why it wouldn't work with tailwind */
     }
     img {
-        transition: opacity .5s ease;
+        transition: opacity .3s ease; /* ^^^ */
     }
 </style>
 
