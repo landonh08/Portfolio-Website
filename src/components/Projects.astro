@@ -4,6 +4,7 @@ import  ProjectLayout from '../layouts/ProjectLayout.astro';
 
 const learnaclefTags = ["Website", "CSS", "JS", "HTML"]
 const blockblastTags = ["Puzzle Solver", "Python"]
+const raycastTags = ["Game", "Python"]
 ---
 
 
@@ -42,11 +43,49 @@ const blockblastTags = ["Puzzle Solver", "Python"]
                 <li class="marker:text-accent">The user draws their current board state on the main board on the left</li>
                 <li class="marker:text-accent">The user draws their three blocks on the right</li>
                 <li class="marker:text-accent">The program will detect when the user has drawn their three blocks and solve the board state</li>
-                <li class="marker:text-accent">The program then highlights on the board where the user should place their blocks in the order red, green, blue (hover image to view)</li>
+                <li class="marker:text-accent">The program then highlights on the board where the user should place their blocks in the order red, green, blue <span class="hidden lg:inline">(hover image to view)</span></li>
             </ol>
         </div>
         <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
             <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/Block-Blast-Solver">Github</a>        </div>
+    </ProjectLayout>
+    <ProjectLayout name="Raycast Engine" tags={raycastTags} date="July 2023">
+        <p class="my-4 text-sm md:text-base lg:text-lg scroll-fade">
+            A raycasting engine built in Python using Pygame that transforms a 2D grid-based map into a 3D world. Fpr fun, I added burrito launchers that let the player fire burritos at NPCs, turning them into burritos on impact.       
+        </p>
+        <div class="hidden sm:block scroll-fade">
+            <h3 class="font-bold text-sm md:text-base">Key Features Include: </h3>
+            <ul class="list-disc ml-6 text-sm md:text-base lg:text-lg">
+                <li class="marker:text-accent">Main area where player can run around with DOOM styled movement</li>
+                <li class="marker:text-accent">Level editior to let the player create their own world</li>
+                <li class="marker:text-accent">Custom UI library</li>
+            </ul>
+        </div>
+        <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
+            <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/Pygame-Raycast-Engine">Github</a>        </div>
+    </ProjectLayout>
+    <ProjectLayout name="Sudoku Solver" tags={blockblastTags} date="June 2023">
+        <p class="my-4 text-sm md:text-base lg:text-lg scroll-fade">
+            A python program that can solve any sudoku board       
+        </p>
+        <div class="hidden sm:block scroll-fade">
+            <h3 class="font-bold text-sm md:text-base">How it's used:</h3>
+            <ul class="list-decimal ml-6 text-sm md:text-base lg:text-lg">
+                <li class="marker:text-accent">
+                    User enters each number on their sudoku board onto the program
+                </li>
+
+                <li class="marker:text-accent">
+                    User should then select a speed
+                    <ul class="list-disc ml-6 mt-2">
+                        <li class="marker:text-accent">First two speeds will slow the algorithm down to visualize the process and the third will solve the board instantly</li>
+                    </ul>
+                </li>
+                <li class="marker:text-accent">Press the solve button a watch the algorithm work</li>
+            </ul>
+        </div>
+        <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
+            <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/Pygame-Raycast-Engine">Github</a>        </div>
     </ProjectLayout>
 </section>
 <script>
