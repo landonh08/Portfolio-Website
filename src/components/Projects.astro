@@ -16,17 +16,19 @@ const learnaclefTags = ["Website", "CSS", "JS", "HTML"]
             <div class="flex flex-wrap justify-center md:justify-start mt-4">
                 {learnaclefTags.map((element, index) => <Tag name={element} index={index}/>)}
             </div>
-            <p class="my-4 text-sm md:text-base">
+            <p class="my-4 text-sm md:text-base lg:text-lg">
                 A simple desktop webapp used to assist beginner musicians in learning to read sheet music, and more experienced musicians, in learning new clefs.
                 It also helps beginners learn how to read their current clef in concert pitch.
             </p>
-            <h3 class="font-bold text-sm md:text-base">Key Features Include: </h3>
-            <ul class="list-disc ml-6 text-sm md:text-base">
-                <li class="marker:text-accent">The ability to switch between four different clefs (treble alto tenor bass)</li>
-                <li class="marker:text-accent">Practice either learning scales or individual notes</li>
-                <li class="marker:text-accent">Switch you preffered prefix (sharps or flats)</li>
-                <li class="marker:text-accent">The ability to transpose the output up to an octave in each direction</li>
-            </ul>
+            <div class="hidden sm:block">
+                <h3 class="font-bold text-sm md:text-base">Key Features Include: </h3>
+                <ul class="list-disc ml-6 text-sm md:text-base lg:text-lg">
+                    <li class="marker:text-accent">The ability to switch between four different clefs (treble alto tenor bass)</li>
+                    <li class="marker:text-accent">Practice either learning scales or individual notes</li>
+                    <li class="marker:text-accent">Switch you preffered prefix (sharps or flats)</li>
+                    <li class="marker:text-accent">The ability to transpose the output up to an octave in each direction</li>
+                </ul>
+            </div>
             <button>
                 <a href=""></a>
             </button>
