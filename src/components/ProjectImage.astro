@@ -4,7 +4,7 @@ const revealedLink = link.slice(0, -4) + "-revealed.png";
 ---
 
 <div class="overflow-hidden rounded-2xl scroll-fade lg:hover:-translate-y-2 pointer-events-auto img-container scroll-fade">
-    <img src={link} alt={alt} class="block w-full h-auto front-img hover:opacity-0">
+    <img src={link} alt={alt} class="block w-full h-auto front-img lg:hover:opacity-0">
 </div>
 
 <style define:vars={{ url:  `url(${revealedLink})` }}>
