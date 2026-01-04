@@ -7,7 +7,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove("show");
         }
     })
-}, {})
+}, { threshold: 0.1, rootMargin: "50px" })
 
 const todoElements = document.querySelectorAll(".scroll-fade, .scroll-left, .scroll-right");
 

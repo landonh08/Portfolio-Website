@@ -3,20 +3,21 @@ const {link, alt} = Astro.props
 const revealedLink = link.slice(0, -4) + "-revealed.png";
 ---
 
-<div class="overflow-hidden rounded-2xl scroll-fade lg:hover:-translate-y-2 pointer-events-auto img-container scroll-fade">
+<div class="overflow-hidden rounded-2xl scroll-fade lg:hover:-translate-y-2 pointer-events-auto img-container">
     <img src={link} alt={alt} class="block w-full h-auto front-img lg:hover:opacity-0">
 </div>
 
 <style define:vars={{ url:  `url(${revealedLink})` }}>
     .img-container {
         background-image: var(--url);
-        background-position: top;
+        background-position: top; 
         background-repeat: no-repeat;
         background-size: contain;
-        transition: translate .3s ease; /* I dont know why it wouldn't work with tailwind */
+
+        transition: translate .3s ease, opacity 800ms ease; 
     }
     img {
-        transition: opacity .3s ease; /* ^^^ */
+        transition: opacity .3s ease; [cite: 5]
     }
 </style>
 
