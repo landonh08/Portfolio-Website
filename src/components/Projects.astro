@@ -1,38 +1,51 @@
 ---
-import ProjectImage from "./ProjectImage.astro";
-import Tag from "./Tag.astro";
+
+import  ProjectLayout from '../layouts/ProjectLayout.astro';
 
 const learnaclefTags = ["Website", "CSS", "JS", "HTML"]
+const blockblastTags = ["Puzzle Solver", "Python"]
 ---
 
 
 <section class="glass text-text p-6 py-2 mx-6 min-h-fit min-w-fit">
     <h1 class="text-2xl md:text-4xl text-center m-10 font-bold tracking-wide">Projects</h1>
-    <div class="grid md:grid-cols-2 border-accent-darker border-6 rounded-2xl p-4 min-w-fit min-h-fit">
-        <ProjectImage link="/images/learnaclefcom.png" alt="learnaclef.com"/>
-        <div class="mx-5">
-            <h1 class="subtitle mt-10 md:my-0 md:text-left">Learnaclef.com</h1>
-            <h2 class="text-center md:text-left">December 2025</h2>
-            <div class="flex flex-wrap justify-center md:justify-start mt-4">
-                {learnaclefTags.map((element, index) => <Tag name={element} index={index}/>)}
-            </div>
-            <p class="my-4 text-sm md:text-base lg:text-lg">
-                A simple desktop webapp used to assist beginner musicians in learning to read sheet music, and more experienced musicians, in learning new clefs.
-                It also helps beginners learn how to read their current clef in concert pitch.
-            </p>
-            <div class="hidden sm:block">
-                <h3 class="font-bold text-sm md:text-base">Key Features Include: </h3>
-                <ul class="list-disc ml-6 text-sm md:text-base lg:text-lg">
-                    <li class="marker:text-accent">The ability to switch between four different clefs (treble alto tenor bass)</li>
-                    <li class="marker:text-accent">Practice either learning scales or individual notes</li>
-                    <li class="marker:text-accent">Switch you preffered prefix (sharps or flats)</li>
-                    <li class="marker:text-accent">The ability to transpose the output up to an octave in each direction</li>
-                </ul>
-            </div>
-            <div class="pointer-events-auto h-fit flex gap-2 mt-4">
-                <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/learnaclef.com">Github</a>
-                <a class="px-6 py-2 rounded bg-linear-to-br to-accent from-cyan-400 hover:-translate-y-1 hover:scale-105 transition-all" href="https://learnaclef.com">Visit Website</a>
-            </div>
+    <ProjectLayout name="Learnaclef" tags={learnaclefTags} date="December 2025">
+        <p class="my-4 text-sm md:text-base lg:text-lg">
+            A simple desktop webapp used to assist beginner musicians in learning to read sheet music, and more experienced musicians, in learning new clefs.
+            It also helps beginners learn how to read their current clef in concert pitch.
+        </p>
+        <div class="hidden sm:block">
+            <h3 class="font-bold text-sm md:text-base">Key Features Include: </h3>
+            <ul class="list-disc ml-6 text-sm md:text-base lg:text-lg">
+                <li class="marker:text-accent">The ability to switch between four different clefs (treble alto tenor bass)</li>
+                <li class="marker:text-accent">Practice either learning scales or individual notes</li>
+                <li class="marker:text-accent">Switch you preffered prefix (sharps or flats)</li>
+                <li class="marker:text-accent">The ability to transpose the output up to an octave in each direction</li>
+            </ul>
         </div>
-    </div>
+        <div class="pointer-events-auto h-fit flex gap-2 mt-4">
+            <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/learnaclef.com">Github</a>
+            <a class="px-6 py-2 rounded bg-linear-to-br to-accent from-cyan-400 hover:-translate-y-1 hover:scale-105 transition-all" href="https://learnaclef.com">Visit Website</a>
+        </div>
+    </ProjectLayout>
+    <ProjectLayout name="Block Blast Solver" tags={blockblastTags} date="May 2025">
+        <p class="my-4 text-sm md:text-base lg:text-lg">
+            A Python program that analyzes any board state in the mobile game
+            <a class="pointer-events-auto text-accent underline" href="https://play.google.com/store/apps/details?id=com.block.juggle&hl=en_US&pli=1">
+                Block Blast
+            </a>
+            and determines an optimal move. The solver prioritizes clearing full rows or columns to maintain combo chains. Then, falls back to alternative clears when no combo move is possible.
+        </p>
+        <div class="hidden sm:block">
+            <h3 class="font-bold text-sm md:text-base">How it's used:</h3>
+            <ol class="list-decimal ml-6 text-sm md:text-base lg:text-lg">
+                <li class="marker:text-accent">The user draws their current board state on the main board on the left</li>
+                <li class="marker:text-accent">The user draws their three blocks on the right</li>
+                <li class="marker:text-accent">The program will detect when the user has drawn their three blocks and solve the board state</li>
+                <li class="marker:text-accent">The program then highlights on the board where the user should place their blocks in the order red, green, blue (hover image to view)</li>
+            </ol>
+        </div>
+        <div class="pointer-events-auto h-fit flex gap-2 mt-4">
+            <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/Block-Blast-Solver">Github</a>        </div>
+    </ProjectLayout>
 </section>

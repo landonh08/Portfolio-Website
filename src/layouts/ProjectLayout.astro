@@ -1,0 +1,19 @@
+---
+import ProjectImage from "../components/ProjectImage.astro";
+import Tag from "../components/Tag.astro";
+const {name, date, tags} = Astro.props;
+const imgLink = `images/${name.replace(/ /g, "").toLowerCase()}.png` 
+---
+
+
+<div class="grid md:grid-cols-2 border-accent-darker border-6 rounded-2xl p-4 min-w-fit min-h-fit mb-4">
+    <div class="flex items-center">
+        <ProjectImage link={imgLink} alt={name}/>
+    </div>
+    <div class="mx-5">
+        <h1 class="subtitle mt-10 md:my-0 md:text-left">{name}</h1>
+        <h2 class="text-center md:text-left">{date}</h2>
+        <div class="flex flex-wrap justify-center md:justify-start mt-4"> {tags.map((element: string, index: number) => <Tag name={element} index={index}/>)}</div>
+        <slot />
+    </div>
+</div>
