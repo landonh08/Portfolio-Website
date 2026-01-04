@@ -14,7 +14,7 @@ const learnaclefTags = ["Website", "CSS", "JS", "HTML"]
             <h1 class="subtitle mt-10 md:my-0 md:text-left">Learnaclef.com</h1>
             <h2 class="text-center md:text-left">December 2025</h2>
             <div class="flex flex-wrap justify-center md:justify-start mt-4">
-                {learnaclefTags.map((element) => <Tag name={element}/>)}
+                {learnaclefTags.map((element, index) => <Tag name={element} index={index}/>)}
             </div>
             <p class="my-4 text-sm md:text-base">
                 A simple desktop webapp used to assist beginner musicians in learning to read sheet music, and more experienced musicians, in learning new clefs.
@@ -27,6 +27,9 @@ const learnaclefTags = ["Website", "CSS", "JS", "HTML"]
                 <li class="marker:text-accent">Switch you preffered prefix (sharps or flats)</li>
                 <li class="marker:text-accent">The ability to transpose the output up to an octave in each direction</li>
             </ul>
+            <button>
+                <a href=""></a>
+            </button>
         </div>
     </div>
 </section>
