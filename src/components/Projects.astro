@@ -5,6 +5,8 @@ import  ProjectLayout from '../layouts/ProjectLayout.astro';
 const learnaclefTags = ["Website", "CSS", "JS", "HTML"]
 const blockblastTags = ["Puzzle Solver", "Python"]
 const raycastTags = ["Game", "Python"]
+const warTags = ["Stats", "Python"]
+const portfolioTags = ["Website", "Tailwind", "TS", "Astro"]
 ---
 
 
@@ -26,7 +28,7 @@ const raycastTags = ["Game", "Python"]
         </div>
         <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
             <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all max-h-fit" href="https://github.com/landonh08/learnaclef.com">Github</a>
-            <a class="px-6 py-2 rounded bg-linear-to-br to-accent from-cyan-400 hover:-translate-y-1 hover:scale-105 transition-all" href="https://learnaclef.com">Visit Website</a>
+            <a class="hidden lg:block px-6 py-2 rounded bg-linear-to-br to-accent from-cyan-400 hover:-translate-y-1 hover:scale-105 transition-all" href="https://learnaclef.com">Visit Website</a>
         </div>
     </ProjectLayout>
     <ProjectLayout name="Block Blast Solver" tags={blockblastTags} date="May 2025">
@@ -82,6 +84,56 @@ const raycastTags = ["Game", "Python"]
                     </ul>
                 </li>
                 <li class="marker:text-accent">Press the solve button a watch the algorithm work</li>
+            </ul>
+        </div>
+        <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
+            <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/Pygame-Raycast-Engine">Github</a>        </div>
+    </ProjectLayout>
+    <ProjectLayout name="1 Million Games of War" tags={warTags} date="June 2025">
+        <p class="my-4 text-sm md:text-base lg:text-lg scroll-fade">
+            Fun stats projects where I simulated 1 million games of the card game 
+            <a class="pointer-events-auto text-accent underline" href="https://en.wikipedia.org/wiki/War_(card_game)">
+                War
+            </a>
+            to see the results.       
+        </p>
+        <div class="hidden sm:block scroll-fade">
+            <h3 class="font-bold text-sm md:text-base">Interesting Stats:</h3>
+            <ul class="list-decimal ml-6 text-sm md:text-base lg:text-lg">
+                <li class="marker:text-accent">Longest Game: 2499 turns</li>
+                <li class="marker:text-accent">Shortest Game: 3 turns</li>
+                <li class="marker:text-accent">Average Game Length:
+                    <ul class="list-disc ml-6 mt-2">
+                        <li class="marker:text-accent">Mean: 234</li>
+                        <li class="marker:text-accent">Mode: 83</li>
+                    </ul>
+                </li>
+                <li class="marker:text-accent">More stats and graphs on the github</li>
+            </ul>
+        </div>
+        <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
+            <a class="px-6 py-2 rounded bg-accent hover:-translate-y-1 hover:scale-105 transition-all" href="https://github.com/landonh08/Pygame-Raycast-Engine">Github</a>        </div>
+    </ProjectLayout>
+    <ProjectLayout name="Portfolio Website" tags={portfolioTags} date="January 2025">
+        <p class="my-4 text-sm md:text-base lg:text-lg scroll-fade">
+            Fun stats projects where I simulated 1 million games of the card game 
+            <a class="pointer-events-auto text-accent underline" href="https://en.wikipedia.org/wiki/War_(card_game)">
+                War
+            </a>
+            to see the results.       
+        </p>
+        <div class="hidden sm:block scroll-fade">
+            <h3 class="font-bold text-sm md:text-base">Interesting Stats:</h3>
+            <ul class="list-decimal ml-6 text-sm md:text-base lg:text-lg">
+                <li class="marker:text-accent">Longest Game: 2499 turns</li>
+                <li class="marker:text-accent">Shortest Game: 3 turns</li>
+                <li class="marker:text-accent">Average Game Length:
+                    <ul class="list-disc ml-6 mt-2">
+                        <li class="marker:text-accent">Mean: 234</li>
+                        <li class="marker:text-accent">Mode: 83</li>
+                    </ul>
+                </li>
+                <li class="marker:text-accent">More stats and graphs on the github</li>
             </ul>
         </div>
         <div class="pointer-events-auto h-fit flex gap-2 mt-4 scroll-fade">
